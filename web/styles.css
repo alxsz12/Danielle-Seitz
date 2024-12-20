@@ -32,7 +32,8 @@ body::-webkit-scrollbar {
     font-weight: 400;
     line-height: 2;
     background-color: #B66681;
-    padding: 1rem;
+    height: 60px;       /* Fixed height for the navbar */
+    padding: 0 1.5rem;  /* Horizontal padding only */
     position: fixed;
     width: 100%;
     top: 0;
@@ -75,7 +76,7 @@ section {
     min-height: 100vh;
     background-image: url('images/main/_MG_1490.JPG');
     background-size: cover;
-    background-position: center;
+    background-position: center 0.5px;
     background-attachment: fixed;
     font-size: 8rem;
     background-color: #FFE9EF;
@@ -86,6 +87,7 @@ section {
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+    position: relative;
 }
 
 footer {
@@ -105,15 +107,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
     cursor: pointer;
-}
-
-.scroll-arrow.visible {
-    opacity: 1;
-    visibility: visible;
 }
 
 .arrow {
@@ -129,6 +123,9 @@ footer {
     margin-top: 8px;
     font-weight: 300;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
 }
 
 @keyframes bounce {
@@ -147,4 +144,9 @@ footer {
     animation: none;
     transform: translateY(5px);
     transition: transform 0.3s ease;
+} 
+
+.scroll-arrow.visible .arrow-text {
+    opacity: 1;
+    visibility: visible;
 } 
