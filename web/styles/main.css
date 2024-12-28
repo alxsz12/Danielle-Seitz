@@ -1,0 +1,51 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #B66681;
+    --text-color: #333;
+    --background-color: #fff;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    font-weight: 200;
+    line-height: 2;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Hide scrollbar */
+html, body {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+main {
+    margin-top: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+footer {
+    background-color: #B66681;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}

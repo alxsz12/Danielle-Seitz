@@ -1,0 +1,64 @@
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.social-button i {
+    font-size: 1.2em;
+}
+
+/* Platform specific styles */
+.linkedin {
+    background-color: #0077b5;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.tiktok {
+    background-color: #000000;
+}
+
+.email {
+    background-color: #ea4335;
+}
+
+.pinterest {
+    background-color: #E60023;
+}
+
+.depop {
+    background-color: #ff2300;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
