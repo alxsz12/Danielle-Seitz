@@ -1,6 +1,34 @@
+body {
+    background-color: #FFE9EF; /* Add background color to entire body */
+}
+
 .projects-section {
-    padding: 4rem 0;
-    background-color: #f5f5f5;
+    padding-top: 120px; /* Adjust this value */
+    margin-top: 0;
+    min-height: 100vh;
+    background-color: transparent; /* Make section transparent since body has background */
+    color: #Fe5d9f;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.projects-content {
+    max-width: 1750px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    margin-top: 80px; /* Add this line to create gap */
+}
+
+.projects-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #B66681;
 }
 
 .projects-grid {

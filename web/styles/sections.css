@@ -49,6 +49,11 @@
     margin-top: 60px;
     position: relative;
     padding-top: 100px;
+    padding-top: 0; /* Remove top padding */
+    margin-top: 0; /* Remove top margin */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
 }
 
 .about-content {

@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!scrollArrow.classList.contains('visible')) {
             e.preventDefault();
             window.scrollBy({
-                top: 100,
+                top: 80,
                 behavior: 'smooth'
             });
         }
     });
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 70) {
             scrollArrow.classList.add('visible');
         } else {
             scrollArrow.classList.remove('visible');
