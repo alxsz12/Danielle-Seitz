@@ -20,3 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 }); 
+
+window.onload = function() {
+    const ballerina = document.getElementById('ballerina');
+
+    // After 4 seconds, trigger the fall-over animation
+    setTimeout(() => {
+        ballerina.classList.add('fall');
+    }, 4000); // Start fall after 4 seconds of twirling
+}

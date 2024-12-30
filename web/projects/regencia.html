@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Danielle Seitz</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/sections.css">
+    <link rel="stylesheet" href="../styles/projects.css">
+    <link rel="stylesheet" href="../styles/social.css">
+    <link rel="stylesheet" href="../styles/animations.css">
 </head>
 <body>
     <header>
@@ -23,81 +28,4 @@
         
     <main>
         <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="path/to/project1-image.jpg" alt="Project 1">
-                    <div class="project-content">
-                        <h3>Regencia</h3>
-                        <p>‘Regencia’ draws inspiration from the Regency era, combining styles from the past with modern twists.
-                            Drapery is played with, especially shown in the cowls along the waist of the skirt, and flowing yards of chiffon, allowing the dress to come alive with movement.
-                            Hand beading is found along the neck of the dress and the waist, rewarding a closer look.
-                            </p>
-                        <div class="project-links">
-                            <button class="project-button" onclick="toggleDropdown('regencia-images')">Images</button>
-                            <button class="project-button" onclick="toggleDropdown('regencia-materials')">Materials</button>
-                        </div>
-                        <div id="regencia-images" class="dropdown-content">
-                            <img src="images/projects/Regencia/_MG_1920.JPG" alt="Regencia Detail 1">
-                            <img src="images/projects/Regencia/_MG_1940.JPG" alt="Regencia Detail 2">
-                            <img src="images/projects/Regencia/_MG_1990.JPG" alt="Regencia Detail 3">
-                            <img src="images/projects/Regencia/_MG_2048.JPG" alt="Regencia Detail 4">
-                            <img src="images/projects/Regencia/_MG_2059.JPG" alt="Regencia Detail 5">
-                            <img src="images/projects/Regencia/_MG_1940.JPG" alt="Regencia Detail 6">
-                            <!-- Add more images as needed -->
-                        </div>
-                        <div id="regencia-materials" class="dropdown-content">
-                            <ul>
-                                <li>Satin & Chiffon</li>
-                                <li>Glass Beads</li>
-                                <li>Metal Grommets</li>
-                                <!-- Add more materials as needed -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="path/to/project2-image.jpg" alt="Project 2">
-                    <div class="project-content">
-                        <h3>Project 2 Title</h3>
-                        <p>Brief description of the second project.</p>
-                        <div class="project-links">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Danielle Seitz. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function toggleDropdown(id) {
-            const dropdowns = document.getElementsByClassName('dropdown-content');
-            // Close all dropdowns first
-            for (let dropdown of dropdowns) {
-                if (dropdown.id !== id && dropdown.classList.contains('show')) {
-                    dropdown.classList.remove('show');
-                }
-            }
-            // Toggle the selected dropdown
-            document.getElementById(id).classList.toggle('show');
-        }
-
-        // Close dropdowns when clicking outside
-        window.onclick = function(event) {
-            if (!event.target.matches('.project-button')) {
-                const dropdowns = document.getElementsByClassName('dropdown-content');
-                for (let dropdown of dropdowns) {
-                    if (dropdown.classList.contains('show')) {
-                        dropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-</body>
-</html> 
+            

@@ -20,7 +20,7 @@ body {
     background-color: var(--background-color);
 }
 
-/* Hide scrollbar */
+/* Hides the scrollbar */
 html, body {
     overflow-y: scroll;
     -ms-overflow-style: none;
