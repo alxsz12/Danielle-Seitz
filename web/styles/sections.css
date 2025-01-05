@@ -44,16 +44,11 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    margin-top: 60px;
+    justify-content: center;
     position: relative;
-    padding-top: 100px;
-    padding-top: 0; /* Remove top padding */
-    margin-top: 0; /* Remove top margin */
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    margin-top: 120px; /* Increased margin-top */
+    padding-top: 60px; /* Added padding-top */
 }
 
 .about-content {
@@ -73,6 +68,23 @@
 .about-content p {
     font-size: 1.2rem;
     line-height: 1.8;
+}
+
+.about-button {
+    height: 35px; /* Reduced height further */
+    display: inline-block;
+    margin-top: 0.5rem; /* Reduced from 1rem to bring it closer to text */
+    padding: 0.3rem 1.2rem; /* Slightly reduced padding */
+    background-color: #B66681;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Added to make text smaller */
+}
+
+.about-button:hover {
+    background-color: #Fe5d9f;
 }
 
 /* Portfolio Section */

@@ -4,6 +4,9 @@ body, html {
     overflow-x: hidden;
 }
 
+body {
+    padding-top: 80px; /* Same as navbar height */
+}
 
 .navbar {
     font-family: 'Times New Roman', Times, serif;
@@ -12,11 +15,11 @@ body, html {
     line-height: 2;
     background: linear-gradient(to bottom, 
         rgba(254, 93, 159, 1) 0%,
-        rgba(254, 93, 159, 0.4) 75%,
+        rgba(254, 93, 159, 0.7) 90%,
         rgba(254, 93, 159, 0) 100%);
-    height: 80; 
-    padding: 0 1.5rem;
-    position: absolute; /* Change from 'fixed' to 'absolute' */
+    height: 80px; /* Added 'px' unit */
+    padding: 0 0.5rem;
+    position: fixed; /* Changed back to fixed */
     top: 0;
     left: 0;
     right: 0;
@@ -28,7 +31,7 @@ body, html {
     box-shadow: none; /* Remove shadow */
 }
 
-/* Remove this rule as it conflicts with section spacing */
+/* Remove or comment out this conflicting rule */
 main, section:first-of-type {
     margin-top: 0;
     padding-top: 0;

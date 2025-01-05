@@ -28,32 +28,65 @@
 
     <main>
         <section id="contact">
-            <h2>Contact Me</h2>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/YOUR_USERNAME" class="social-button linkedin">
-                    <i class="fab fa-linkedin"></i>
-                    LinkedIn
-                </a>
-                <a href="https://instagram.com/YOUR_USERNAME" class="social-button instagram">
-                    <i class="fab fa-instagram"></i>
-                    Instagram
-                </a>
-                <a href="https://tiktok.com/@YOUR_USERNAME" class="social-button tiktok">
-                    <i class="fab fa-tiktok"></i>
-                    TikTok
-                </a>
-                <a href="https://pinterest.com/YOUR_USERNAME" class="social-button pinterest">
-                    <i class="fab fa-pinterest"></i>
-                    Pinterest
-                </a>
-                <a href="https://depop.com/YOUR_USERNAME" class="social-button depop">
-                    <i class="fas fa-shopping-bag"></i>
-                    Depop
-                </a>
-                <a href="mailto:your.email@example.com" class="social-button email">
-                    <i class="fas fa-envelope"></i>
-                    Email
-                </a>
+            <div class="social-wheel-container">
+                <div class="social-wheel">
+                    <a href="#" class="social-button linkedin">
+                        <div class="content-wrapper">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </div>
+                        <div class="form-popup">
+                            <form action="/submit-linkedin" method="POST">
+                                <h3>Connect on LinkedIn</h3>
+                                <div class="form-field">
+                                    <input type="text" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" placeholder="Your LinkedIn URL" required>
+                                </div>
+                                <div class="form-field">
+                                    <textarea placeholder="Message"></textarea>
+                                </div>
+                                <div class="form-field">
+                                    <button type="submit">Connect</button>
+                                </div>
+                            </form>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/YOUR_USERNAME" class="social-button instagram">
+                        <div class="content-wrapper">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </div>
+                    </a>
+                    <a href="https://tiktok.com/@YOUR_USERNAME" class="social-button tiktok">
+                        <div class="content-wrapper">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </div>
+                    </a>
+                    <a href="https://pinterest.com/YOUR_USERNAME" class="social-button pinterest">
+                        <div class="content-wrapper">
+                            <i class="fab fa-pinterest"></i>
+                            <span>Pinterest</span>
+                        </div>
+                    </a>
+                    <a href="https://depop.com/YOUR_USERNAME" class="social-button depop">
+                        <div class="content-wrapper">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Depop</span>
+                        </div>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="social-button email">
+                        <div class="content-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="wheel-center">
+                    <span>Connect</span>
+                </div>
             </div>
         </section>
     </main>
@@ -61,5 +94,7 @@
     <footer>
         <p>&copy; 2025 Danielle Seitz. All rights reserved.</p>
     </footer>
+
+    <script src="scripts/social.js"></script>
 </body>
 </html>
