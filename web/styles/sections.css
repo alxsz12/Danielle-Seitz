@@ -14,7 +14,7 @@
     background-size: cover;
     background-position: center 0.5px;
     background-attachment: fixed;
-    font-size: 8rem;
+    font-size: 7rem;
     background-color: #FFE9EF;
     color: #Fe5d9f;
     text-align: center;
@@ -40,7 +40,7 @@
     background-attachment: fixed;
     font-size: 8rem;
     background-color: #FFE9EF;
-    color: #Fe5d9f;
+    color: #B66681;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.9);
@@ -71,16 +71,18 @@
 }
 
 .about-button {
-    height: 35px; /* Reduced height further */
-    display: inline-block;
-    margin-top: 0.5rem; /* Reduced from 1rem to bring it closer to text */
-    padding: 0.3rem 1.2rem; /* Slightly reduced padding */
+    height: 75px; /* Reduced height further */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem; /* Reduced from 1rem to bring it closer to text */
+    padding: 1rem 1rem; /* Slightly reduced padding */
     background-color: #B66681;
     color: white;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 4px;
     transition: background-color 0.3s ease;
-    font-size: 1rem; /* Added to make text smaller */
+    font-size: 2rem; /* Added to make text smaller */
 }
 
 .about-button:hover {
@@ -148,3 +150,4 @@ section {
         margin: 0 1rem;
     }
 }
+

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 70) {
+        if (window.scrollY > 50) {
             scrollArrow.classList.add('visible');
         } else {
             scrollArrow.classList.remove('visible');

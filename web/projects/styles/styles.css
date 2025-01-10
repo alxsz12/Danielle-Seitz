@@ -21,14 +21,16 @@ footer {
 
 .project-header {
     text-align: center;
-    padding: 2rem 0;
+    padding: 4rem 0;
+    color: #B66681;
 }
 
 .project-container {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    color: #B66681;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -157,4 +159,10 @@ footer {
     .image-gallery-container {
         width: 90%;
     }
+}
+
+.materials-text {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
 }
