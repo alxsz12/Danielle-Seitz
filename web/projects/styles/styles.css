@@ -20,16 +20,26 @@ footer {
 }
 
 .project-header {
+    margin-top: -60px;
     text-align: center;
-    padding: 4rem 0;
+    padding: 2rem 0;
     color: #B66681;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.project-header h1 {
+    display: inline-block;
+    border-bottom: 2px solid #B66681;
+    padding: 0 20rem;
+    margin: 0;
 }
 
 .project-container {
     display: flex;
     gap: 1rem;
     color: #B66681;
-    padding: 2rem;
+    padding: -2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -45,6 +55,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .project-main-image img {
@@ -52,14 +66,15 @@ footer {
     height: 400px;
     object-fit: contain;
     background: #ffffff00;
-    border: 1px solid #eee;
+    border-radius: 8px;
 }
 
 .image-gallery-container {
     position: relative;
     width: 100%;
     margin-top: 1rem;
-    padding: 0 3rem;
+    padding: 1rem 3rem;
+    border-top: 1px solid #eee;
 }
 
 .image-gallery {
@@ -69,6 +84,7 @@ footer {
     scrollbar-width: none;
     -ms-overflow-style: none;
     gap: 0.5rem;
+    padding: 0.5rem 0;
 }
 
 .image-gallery::-webkit-scrollbar {
@@ -114,7 +130,7 @@ footer {
         transform: translateY(-50%) translateX(0);
     }
     50% {
-        transform: translateY(-50%) translateX(3px);
+        transform: translateY(-50%) translateX(-10px);
     }
 }
 
@@ -123,7 +139,7 @@ footer {
         transform: translateY(-50%) translateX(0);
     }
     50% {
-        transform: translateY(-50%) translateX(-3px);
+        transform: translateY(-50%) translateX(10px);
     }
 }
 
@@ -143,6 +159,7 @@ footer {
     transition: transform 0.3s ease;
     opacity: 0.7;
     background: #fff;
+    border-radius: 4px;
 }
 
 .image-gallery img:hover {
@@ -165,4 +182,138 @@ footer {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: bold;
+}
+
+.project-description ul {
+    padding-left: 20px;  /* Reduces the default left padding */
+    margin: 0;          /* Removes default margins */
+}
+
+.project-description li {
+    margin-bottom: 12px;  /* Adds space between bullet points */
+    line-height: 1.5;    /* Improves readability for multi-line bullets */
+    padding-left: 5px;   /* Adds a small space between bullet and text */
+}
+
+/* Remove margin from last bullet to maintain consistent spacing with materials text */
+.project-description li:last-child {
+    margin-bottom: 0;
+}
+
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1400px;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+}
+
+.project-navigation::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 2px;
+    background-color: #B66681;
+}
+
+.nav-arrow {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #B66681;
+    padding: 1rem;
+}
+
+.nav-arrow:hover {
+    color: #Fe5d9f;
+}
+
+.nav-arrow .arrow {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    animation: bounce 1s infinite;
+}
+
+.nav-arrow .project-name {
+    font-size: 1.1rem;
+}
+
+.prev-project {
+    margin-right: auto;
+}
+
+.next-project {
+    margin-left: auto;
+}
+
+.prev-project:hover {
+    animation-name: slideLeft;
+}
+
+.next-project:hover {
+    animation-name: slideRight;
+}
+
+@keyframes slideLeft {
+    0%, 100% {
+        transform: translateX(0) scale(1.05);
+    }
+    50% {
+        transform: translateX(-10px) scale(1.05);
+    }
+}
+
+@keyframes slideRight {
+    0%, 100% {
+        transform: translateX(0) scale(1.05);
+    }
+    50% {
+        transform: translateX(10px) scale(1.05);
+    }
+}
+
+.prev-project .arrow {
+    animation-name: bounceLeft;
+}
+
+.next-project .arrow {
+    animation-name: bounceRight;
+}
+
+@keyframes bounceLeft {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+/* Add a class for the fade effect */
+.fade-out {
+    opacity: 0;
+}
+
+/* Slide directions */
+.slide-out-left {
+    transform: translateX(-100%);
+}
+
+.slide-out-right {
+    transform: translateX(100%);
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+}
+
+.slide-in-right {
+    transform: translateX(0);
 }

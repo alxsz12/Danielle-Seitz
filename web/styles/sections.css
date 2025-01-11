@@ -22,8 +22,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
     position: relative;
+    padding-top: 0 !important;
+    margin-top: -120px;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
 }
 
 .hero-content {
@@ -33,36 +37,33 @@
 
 /* About Section */
 .about-section {
-    min-height: 100vh;
-    background-image: url('../images/about/dan_designer_poster_026.jpg');
-    background-size: cover;
-    background-position: center 0.5px;
-    background-attachment: fixed;
-    font-size: 8rem;
-    background-color: #FFE9EF;
-    color: #B66681;
-    text-align: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    min-height: 80vh;
     position: relative;
-    margin-top: 120px; /* Increased margin-top */
-    padding-top: 60px; /* Added padding-top */
+}
+
+.about-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .about-content {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f5f5f5;
 }
 
 .about-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #B66681;
+    text-align: center;
 }
 
 .about-content p {
@@ -106,24 +107,6 @@
     padding: 2rem;
 }
 
-/* Contact Section */
-.contact-section {
-    padding: 4rem 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-}
-
-.contact-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-}
-
 /* General section styles */
 section {
     padding: 4rem 2rem;
@@ -148,6 +131,197 @@ section {
     .contact-content {
         padding: 1rem;
         margin: 0 1rem;
+    }
+}
+
+main {
+    padding-top: 120px;
+}
+
+/* Add this new selector */
+.home-page main {
+    padding-top: 0;
+}
+
+/* Add this to remove padding for project pages */
+.project-header {
+    margin-top: -120px;  /* This counteracts the main padding */
+}
+
+.scroll-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #B66681;
+    z-index: 10;
+}
+
+.arrow {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.arrow-text {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-30px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-15px) translateX(-50%);
+    }
+}
+
+.scroll-arrow:hover {
+    color: #Fe5d9f;
+}
+
+.gallery-section {
+    padding: 4rem 2rem;
+    background-color: #FFE9EF;
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.main-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.main-gallery::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+.main-gallery img {
+    flex: 0 0 auto;
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.main-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(182, 102, 129, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.gallery-nav:hover {
+    background: rgba(182, 102, 129, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav.prev {
+    left: 0;
+}
+
+.gallery-nav.next {
+    right: 0;
+}
+
+.mosaic-gallery {
+    padding: 2rem;
+    background-color: #FFE9EF;
+    display: flex;
+    justify-content: center;
+}
+
+.mosaic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 300px));
+    grid-auto-rows: 250px;
+    grid-gap: 1.5rem;
+    padding: 1rem;
+    justify-content: center;
+    grid-auto-flow: dense;
+}
+
+.mosaic-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.mosaic-item.wide {
+    grid-column: span 2;
+}
+
+.mosaic-item.tall {
+    grid-row: span 2;
+}
+
+.mosaic-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mosaic-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .mosaic-container {
+        grid-template-columns: repeat(2, minmax(250px, 300px));
+        grid-auto-rows: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mosaic-container {
+        grid-template-columns: minmax(250px, 300px);
+        grid-auto-rows: 300px;
+    }
+    
+    .mosaic-item.wide {
+        grid-column: auto;
+    }
+    
+    .mosaic-item.tall {
+        grid-row: auto;
     }
 }
 

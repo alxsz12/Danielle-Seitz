@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="images/main/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Danielle Seitz</title>
     <link rel="stylesheet" href="styles/main.css">
@@ -40,24 +41,21 @@
                         <i class="fab fa-linkedin"></i>
                         <span>LinkedIn</span>
                     </a>
-                    <button id="contact-button" class="social-link">
+                    <a href="#email-form" class="social-link">
                         <i class="far fa-envelope"></i>
                         <span>Email</span>
-                    </button>
+                    </a>
                 </div>
 
-                <!-- Popup Form -->
-                <div id="contact-form" class="contact-form-popup">
-                    <div class="form-content">
-                        <button class="close-button">&times;</button>
-                        <h3>Send me a message</h3>
-                        <form id="email-form">
-                            <input type="text" name="name" placeholder="Name" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                            <textarea name="message" placeholder="Your message" required></textarea>
-                            <button type="submit" class="submit-button">Send Message</button>
-                        </form>
-                    </div>
+                <!-- Contact Form (no longer a popup) -->
+                <div id="contact-form" class="contact-form">
+                    <h3>Send me a message</h3>
+                    <form id="email-form">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Your message" required></textarea>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
                 </div>
             </div>
         </section>
