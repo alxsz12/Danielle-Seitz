@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="images/main/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Danielle Seitz</title>
     <link rel="stylesheet" href="styles/main.css">
@@ -19,6 +18,11 @@
             <div class="logo">
                 <a href="index.html"><h1>Danielle Seitz</h1></a>
             </div>
+            <button class="mobile-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects/projects.html">Portfolio</a></li>
@@ -30,32 +34,37 @@
     <main>
         <section id="contact" class="contact-section">
             <div class="contact-content">
-                <h2>Contact Danielle</h2>
+                <h2>Let's Connect</h2>
                 <div class="social-links">
                     <a href="https://instagram.com" target="_blank" class="social-link">
                         <i class="fab fa-instagram"></i>
                         <span>Instagram</span>
                     </a>
-                
-                    <a href="https://www.linkedin.com/in/danielleseitz6161/" target="_blank" class="social-link">
+                    <a href="https://linkedin.com" target="_blank" class="social-link">
                         <i class="fab fa-linkedin"></i>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="#email-form" class="social-link">
+                    <button id="contact-button" class="social-link">
                         <i class="far fa-envelope"></i>
-                        <span>Email</span>
-                    </a>
+                        <span>Email Me</span>
+                    </button>
                 </div>
 
-                <!-- Contact Form (no longer a popup) -->
-                <div id="contact-form" class="contact-form">
-                    <h3>Send me a message</h3>
-                    <form id="email-form">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <textarea name="message" placeholder="Your message" required></textarea>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
+                <!-- Popup Form -->
+                <div id="contact-form" class="contact-form-popup">
+                    <div class="form-content">
+                        <h3>Send me a message</h3>
+                        <form id="email-form" action="https://formsubmit.co/danielleseitz8@gmail.com" method="POST">
+                            <!-- Optional: Redirect after submission -->
+                            <input type="hidden" name="_next" value="https://danielleseitz/thanks.html">
+                            <!-- Optional: Custom subject -->
+                            <input type="hidden" name="_subject" value="New Portfolio Contact!">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <textarea name="message" placeholder="Your message" required></textarea>
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -65,6 +74,7 @@
         <p>&copy; 2025 Danielle Seitz. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
     <script src="scripts/contact.js"></script>
 </body>
 </html>

@@ -116,21 +116,77 @@ section {
 /* Responsive styles */
 @media (max-width: 768px) {
     .section {
-        padding: 2rem 0;
+        padding: 1rem 0;
+    }
+
+    .hero-section {
+        font-size: 3rem;
+        background-attachment: scroll;
+        margin-top: -80px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .about-image {
+        min-height: 300px;
     }
 
     .about-content {
-        padding: 1rem;
-        margin: 0 1rem;
+        padding: 2rem 1rem;
     }
 
-    .portfolio-content {
-        padding: 1rem;
+    .about-content h2 {
+        font-size: 2rem;
     }
 
-    .contact-content {
-        padding: 1rem;
-        margin: 0 1rem;
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .mosaic-container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .mosaic-item {
+        aspect-ratio: 4/3;
+    }
+
+    .mosaic-item.wide,
+    .mosaic-item.tall {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .scroll-arrow {
+        bottom: 1rem;
+    }
+
+    .arrow {
+        font-size: 2rem;
+    }
+
+    .arrow-text {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        font-size: 2.5rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .mosaic-container {
+        padding: 0.25rem;
     }
 }
 

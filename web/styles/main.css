@@ -51,3 +51,68 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+/* Additional responsive styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    main {
+        margin-top: 0;
+    }
+}
+
+/* Prevent content overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Handle mobile navigation open state */
+body.nav-open {
+    overflow: hidden;
+}
+
+/* Improve touch targets on mobile */
+button,
+a {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Prevent horizontal scroll */
+.container {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Improve form elements on mobile */
+input,
+textarea,
+select,
+button {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
