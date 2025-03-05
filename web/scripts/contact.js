@@ -4,8 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeButton = document.querySelector('.close-button');
     const emailForm = document.getElementById('email-form');
 
-    contactButton.addEventListener('click', () => {
-        contactForm.style.display = 'flex';
+    contactButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        contactForm.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+        });
     });
 
     closeButton.addEventListener('click', () => {

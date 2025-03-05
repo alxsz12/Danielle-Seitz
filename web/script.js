@@ -35,45 +35,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Image Gallery Navigation
-    const galleryContainer = document.querySelector('.image-gallery-container');
-    if (galleryContainer) {
-        const mainImage = document.getElementById('mainImage');
-        const gallery = galleryContainer.querySelector('.image-gallery');
-        const prevBtn = galleryContainer.querySelector('.prev');
-        const nextBtn = galleryContainer.querySelector('.next');
-        const images = gallery.querySelectorAll('img');
-        let currentIndex = 0;
+    const gallery = document.querySelector('.image-gallery');
+    const thumbnails = gallery.querySelectorAll('img');
+    const mainImage = document.getElementById('mainImage');
+    const prevBtn = document.querySelector('.gallery-nav.prev');
+    const nextBtn = document.querySelector('.gallery-nav.next');
+    let currentIndex = 0; // start with the first image
 
-        // Function to update the main image and thumbnail states
-        const updateGallery = (newIndex) => {
-            images.forEach(img => img.classList.remove('active'));
-            images[newIndex].classList.add('active');
-            if (mainImage) {
-                mainImage.src = images[newIndex].src;
-                mainImage.alt = images[newIndex].alt;
-            }
-        };
-
-        // Previous button click handler
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateGallery(currentIndex);
-        });
-
-        // Next button click handler
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateGallery(currentIndex);
-        });
-
-        // Thumbnail click handlers
-        images.forEach((img, index) => {
-            img.addEventListener('click', () => {
-                currentIndex = index;
-                updateGallery(currentIndex);
-            });
+    function setActiveImage(index) {
+        if (index < 0 || index >= thumbnails.length) return;
+        // Remove active class from current image
+        thumbnails[currentIndex].classList.remove('active');
+        // Set new index and apply active style
+        currentIndex = index;
+        thumbnails[currentIndex].classList.add('active');
+        // Update the main image to show the active thumbnail's image
+        mainImage.src = thumbnails[currentIndex].src;
+        // Scroll the active thumbnail into view in the timeline
+        thumbnails[currentIndex].scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center'
         });
     }
+
+    nextBtn.addEventListener('click', function () {
+        let newIndex = currentIndex + 1;
+        if (newIndex >= thumbnails.length) {
+            newIndex = 0; // Loop back to the start
+        }
+        setActiveImage(newIndex);
+    });
+
+    prevBtn.addEventListener('click', function () {
+        let newIndex = currentIndex - 1;
+        if (newIndex < 0) {
+            newIndex = thumbnails.length - 1; // Loop back to the last image
+        }
+        setActiveImage(newIndex);
+    });
+
+    // Optionally, you can add click events to thumbnails to change the main image
+    thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            setActiveImage(index);
+        });
+    });
 
     // Scroll arrow functionality (only on home page)
     const scrollArrow = document.getElementById('scrollArrow');
@@ -96,5 +102,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-}); 
+});
 
